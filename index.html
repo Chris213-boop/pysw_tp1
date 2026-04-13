@@ -3,47 +3,55 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Mega menu con Css</title>
-    <link rel="stylesheet" href="/pysw_tp1/assets/css/styles.css">
+    <title>Turismo Jujuy</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/header.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <nav class="menu">
-                <a href="#">Inicio</a>
-                <a href="#">Nosotros</a>
-                <button class="desplegar">
-                    <span>Tutoriales +</span>
-                    <div class="mega-menu">
-                        <h2>Nuestros Tutoriales</h2>
-                        <div class="categorias">
-                            <div class="lista">
-                                <h3>Destinos</h3>
-                                <a href="#">Enlace 1</a>
-                                <a href="#">Enlace 2</a>
-                                <a href="#">Enlace 3</a>
-                            </div>
-                            <div class="lista">
-                                <h3>Agencia</h3>
-                                <a href="#">Enlace 1</a>
-                                <a href="#">Enlace 2</a>
-                                <a href="#">Enlace 3</a>
-                            </div>
-                            <div class="lista">
-                                <h3>Precios</h3>
-                                <a href="#">Enlace 1</a>
-                                <a href="#">Enlace 2</a>
-                                <a href="#">Enlace 3</a>
-                            </div>
-                        </div>
-                    </div>
-                </button>
-                <a href="#">Suscribete</a>
-                <a href="#">Contacto</a>
-            </nav>
-        </div>
-    </header>
+    <div id="header"></div>
+
+<main>
+
+<section class="hero">
+    <video autoplay muted loop>
+        <source src="assets/video/jujuy.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay">
+        <h1>Descubrí Nuevos Destinos</h1>
+        <p>Viví experiencias únicas</p>
+    </div>
+</section>
+
+<section class="destacados">
+    <h2>Destinos Destacados</h2>
+
+    <div class="cards">
+
+        <article class="card">
+            <img src="assets/img/jujuy.jpg">
+            <h3>Jujuy</h3>
+        </article>
+
+        <article class="card">
+            <img src="assets/img/bariloche.jpg">
+            <h3>Bariloche</h3>
+        </article>
+
+        <article class="card">
+            <img src="assets/img/mendoza.jpg">
+            <h3>Mendoza</h3>
+        </article>
+
+    </div>
+</section>
+
+</main>
+
+<div id="footer"></div>
+
+<script src="assets/js/include.js"></script>
 </body>
 
 </html>
