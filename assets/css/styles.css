@@ -4,3 +4,147 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+/* --- SECCIÓN HERO --- */
+.hero {
+    position: relative;
+    height: 80vh; /* Ajusta el alto a tu gusto */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+#hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.4); /* Capa oscura para que el texto se lea bien */
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Animación de texto */
+.animate-text {
+    font-size: 3.5rem;
+    animation: fadeInDown 1.5s ease-out;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- TARJETAS CON HOVER --- */
+.grid-destinos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.card-info {
+    position: absolute;
+    bottom: -100%;
+    background: rgba(140, 148, 184, 0.9); /* Usando el color azulado que tenías en el footer */
+    width: 100%;
+    padding: 1rem;
+    transition: bottom 0.4s ease;
+    color: white;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card:hover .card-info {
+    bottom: 0;
+}
+
+/* --- CONTADOR ANIMADO --- */
+.contador {
+    text-align: center;
+    padding: 3rem;
+    background: #f4f4f4;
+}
+
+.number {
+    font-size: 3rem;
+    font-weight: bold;
+    display: block;
+}
+
+/* Simulación de contador con Keyframes (Esto anima el contenido) */
+/* Nota: Para un contador real que llegue a 500 se usa JS, pero aquí te doy el efecto visual CSS */
+.number::after {
+    content: "+";
+    animation: countSim 3s infinite alternate;
+}
+
+@keyframes countSim {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* --- CARRUSEL SOLO CSS --- */
+.carrusel-css {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.cards-carrusel {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.card-testimonio {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border: 1px solid #ddd;
+}
+
+/* Lógica de los Radio Buttons */
+#item-1:checked ~ .cards-carrusel #test-1,
+#item-2:checked ~ .cards-carrusel #test-2 {
+    opacity: 1;
+}
+
+input[type="radio"] {
+    margin-bottom: 1rem;
+}
