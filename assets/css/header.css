@@ -1,99 +1,127 @@
-.header{
+.header {
     width: 100%;
-    height: 120px;
-    background:#141c2c;
+    height: 80px;
+    background: #141c2c;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-.container{
+
+.container {
     width: 100%;
     max-width: none;
     margin: auto;
     padding: 0 15px;
 }
 
-.menu{
-    display: flex;            
-    align-items: center;        
+.menu {
+    display: flex;
+    align-items: center;
     position: relative;
+    height: 80px;
 }
 
-.menu img{
-    width: 120px;
-    height: auto;
+.menu img:first-child {
+    height: 50px;
+    width: auto;
     margin-left: 15px;
 }
 
-.menu a{
+.menu a {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: #fff;
-    padding: 0 15px;   
-    height: 120px; 
+    padding: 0 15px;
+    height: 80px;
     gap: 6px;
+    transition: background 0.3s;
 }
 
-.menu a:hover{
+.menu a:hover {
     background: #1389e0;
 }
 
-.mega-menu{
+.logo-centro {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    pointer-events: none; 
+}
+
+.logo-centro img {
+    height: 60px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    transition: height 0.3s ease;
+}
+
+.mega-menu {
     width: 100%;
     position: absolute;
     background: #fff;
-    top: 200px; left: 0;
+    top: 100px;
+    left: 0;
     max-width: 350px;
-    padding: 10px;
+    padding: 15px;
     cursor: default;
-    transition: all 300ms ease-out;
+    transition: all 400ms ease-in-out;
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
-    border-radius: 10px;
-    
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
-.desplegar:hover .mega-menu{
+.desplegar {
+    background: none;
+    border: none;
+    padding: 0 15px;
+    height: 80px;
+    cursor: pointer;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.desplegar:hover {
+    background: #1389e0;
+}
+
+.desplegar:hover .mega-menu {
     opacity: 1;
     visibility: visible;
-    top: 120px;
+    top: 80px;
 }
 
-.mega-menu  h2{
-    padding: 5px;
-    background: #1389e0;
-    color: #fff;
-    border-radius: 10px;
-}
-
-.desplegar{
-    background: none;
-    border:none;
-    padding: 26px 15px;
-    cursor: pointer;
-    outline: 0px;
-}
-
-.desplegar:hover{
-    background: #1389e0;
-}
-
-.desplegar span{
+.desplegar span {
     color: #fff;
     font-size: 16px;
 }
 
-.categorias{
+.mega-menu h2 {
+    padding: 8px;
+    background: #1389e0;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.categorias {
     display: flex;
-    gap: 20px; 
-    padding: 10px;
+    gap: 15px;
+    padding: 15px 0;
+    justify-content: center;
 }
 
-.categorias a:hover{
-    background: none;
-    color: #1389e0;
-}
-
-.item{
+.item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,31 +129,52 @@
     width: 80px;
 }
 
-.item img{
+.item img {
     width: 70px;
-    height: 90px;
+    height: 70px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 50%;
 }
 
-.item a{
+.item a {
     margin-top: 5px;
     text-decoration: none;
     color: #333;
-    font-size: 14px;
+    font-size: 13px;
+    height: auto;
+    padding: 0;
 }
 
-.logo-centro{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+.item a:hover {
+    background: none;
+    color: #1389e0;
 }
 
-.logo-centro img{
-    height: 120px;
-    width: auto;
-}
-
-.registrarse{
+.registrarse {
     margin-left: auto;
+}
+
+@media (max-width: 1024px) {
+    .logo-centro img {
+        height: 45px;
+    }
+}
+
+@media (max-width: 850px) {
+    .logo-centro {
+        display: none;
+    }
+    .menu {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu a, .desplegar {
+        padding: 0 8px;
+        font-size: 13px;
+    }
+    .menu img:first-child {
+        height: 35px;
+    }
 }
