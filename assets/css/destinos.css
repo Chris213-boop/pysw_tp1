@@ -1,0 +1,165 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#f5f7fa;
+  padding:20px;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:20px;
+  color:#1d3557;
+}
+
+/* =========================
+    FILTROS CSS ONLY
+========================= */
+
+.filtros{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.filtros input{
+  display:none;
+}
+
+.filtros label{
+  display:inline-block;
+  padding:10px 15px;
+  margin:5px;
+  background:#ddd;
+  border-radius:20px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.filtros label:hover{
+  background:#aaa;
+  color:white;
+}
+
+/* activo visual */
+#todos:checked ~ .filtros label[for="todos"],
+#cultural:checked ~ .filtros label[for="cultural"],
+#naturaleza:checked ~ .filtros label[for="naturaleza"],
+#playa:checked ~ .filtros label[for="playa"],
+#gastronomico:checked ~ .filtros label[for="gastronomico"],
+#religioso:checked ~ .filtros label[for="religioso"]{
+  background:#1d3557;
+  color:white;
+}
+
+/* =========================
+    MASONRY GRID
+========================= */
+
+.galeria{
+  column-count: 3;
+  column-gap: 15px;
+}
+
+.card{
+  position:relative;
+  margin-bottom:15px;
+  overflow:hidden;
+  border-radius:15px;
+  break-inside: avoid;
+}
+
+.card img{
+  width:100%;
+  display:block;
+  transition: transform 0.4s;
+}
+
+/* zoom */
+.card:hover img{
+  transform:scale(1.1);
+}
+
+/* overlay */
+.overlay{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding:10px;
+  background:rgba(0,0,0,0.6);
+  color:white;
+  transform:translateY(100%);
+  transition:0.3s;
+}
+
+.card:hover .overlay{
+  transform:translateY(0);
+}
+
+/* =========================
+    FILTROS FUNCIONALES
+========================= */
+
+/* cuando selecciono cultura */
+#cultural:checked ~ .galeria .card:not(.cultural){
+  display:none;
+}
+
+#naturaleza:checked ~ .galeria .card:not(.naturaleza){
+  display:none;
+}
+
+#playa:checked ~ .galeria .card:not(.playa){
+  display:none;
+}
+
+#gastronomico:checked ~ .galeria .card:not(.gastronomico){
+  display:none;
+}
+
+#religioso:checked ~ .galeria .card:not(.religioso){
+  display:none;
+}
+
+/* todos */
+#todos:checked ~ .galeria .card{
+  display:block;
+}
+
+/* =========================
+    TABLA RESPONSIVE
+========================= */
+
+.tabla-container{
+  margin-top:40px;
+  overflow-x:auto;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:400px;
+}
+
+th, td{
+  padding:12px;
+  border:1px solid #ccc;
+  text-align:center;
+}
+
+th{
+  background:#1d3557;
+  color:white;
+}
+
+/* responsive mobile */
+@media (max-width:768px){
+  .galeria{
+    column-count:1;
+  }
+}
