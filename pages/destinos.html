@@ -3,27 +3,197 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Destinos</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos de Argentina</title>
+    <link rel="stylesheet" href="../assets/css/destinos.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
 </head>
 
 <body>
+    <div id="header"></div>
 
-    <h1>Destinos</h1>
+    <h1>🇦🇷 Destinos Turísticos de Argentina</h1>
+
+    <!-- 🔘 FILTROS -->
+    <input type="radio" name="filtro" id="todos" checked>
+    <input type="radio" name="filtro" id="cultural">
+    <input type="radio" name="filtro" id="naturaleza">
+    <input type="radio" name="filtro" id="playa">
+    <input type="radio" name="filtro" id="gastronomico">
+    <input type="radio" name="filtro" id="religioso">
+
 
     <div class="filtros">
-        <input type="radio" name="filtro" id="todos" checked>
+
+
         <label for="todos">Todos</label>
 
-        <input type="radio" name="filtro" id="playa">
-        <label for="playa">Playa</label>
+
+        <label for="cultural">Cultural</label>
+
+
+        <label for="naturaleza">Naturaleza</label>
+
+
+        <label for="playa">Sol y Playa</label>
+
+        <label for="gastronomico">Gastronómico</label>
+
+        <label for="religioso">Religioso</label>
+
     </div>
 
-    <div class="grid">
-        <div class="item playa">Playa 1</div>
-        <div class="item montana">Montaña</div>
-    </div>
+    <!-- 🖼️ GALERÍA -->
+    <section class="galeria">
 
+        <!-- 1 -->
+        <div class="card naturaleza">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Perito_Moreno_Glacier_2023.jpg/1280px-Perito_Moreno_Glacier_2023.jpg">
+            <div class="overlay">Glaciar Perito Moreno</div>
+        </div>
+
+        <!-- 2 -->
+        <div class="card naturaleza">
+            <img
+                src="https://content-viajes.nationalgeographic.com.es/medio/2024/07/19/iguazu_964b1569_240719141424_1280x854.jpg">
+            <div class="overlay">Cataratas del Iguazú</div>
+        </div>
+
+        <!-- 3 -->
+        <div class="card cultural">
+            <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7">
+            <div class="overlay">Buenos Aires - Caminito</div>
+        </div>
+
+        <!-- 4 -->
+        <div class="card cultural">
+            <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62">
+            <div class="overlay">Teatro Colón</div>
+        </div>
+
+        <!-- 5 -->
+        <div class="card playa">
+            <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21">
+            <div class="overlay">Mar del Plata</div>
+        </div>
+
+        <!-- 6 -->
+        <div class="card playa">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+            <div class="overlay">Las Grutas</div>
+        </div>
+
+        <!-- 7 -->
+        <div class="card naturaleza">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <div class="overlay">Quebrada de Humahuaca</div>
+        </div>
+
+        <!-- 8 -->
+        <div class="card gastronomico">
+            <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2">
+            <div class="overlay">Asado Argentino</div>
+        </div>
+
+        <!-- 9 -->
+        <div class="card gastronomico">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
+            <div class="overlay">Vinos de Mendoza</div>
+        </div>
+
+        <!-- 10 -->
+        <div class="card religioso">
+            <img
+                src="https://somosviajes.com.ar/wp-content/uploads/2023/05/Escalera_en_el_Santuario_de_la_Difunta_Correa-scaled.jpg">
+            <div class="overlay">Difunta Correa</div>
+        </div>
+
+    </section>
+
+    <!-- 📊 TABLA -->
+    <section class="tabla-container">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Destino</th>
+                    <th>Categoría</th>
+                    <th>Provincia</th>
+                    <th>Precio estimado</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Glaciar Perito Moreno</td>
+                    <td>Naturaleza</td>
+                    <td>Santa Cruz</td>
+                    <td>$1800</td>
+                </tr>
+                <tr>
+                    <td>Cataratas del Iguazú</td>
+                    <td>Naturaleza</td>
+                    <td>Misiones</td>
+                    <td>$1600</td>
+                </tr>
+                <tr>
+                    <td>Buenos Aires</td>
+                    <td>Cultural</td>
+                    <td>CABA</td>
+                    <td>$900</td>
+                </tr>
+                <tr>
+                    <td>Teatro Colón</td>
+                    <td>Cultural</td>
+                    <td>CABA</td>
+                    <td>$700</td>
+                </tr>
+                <tr>
+                    <td>Mar del Plata</td>
+                    <td>Playa</td>
+                    <td>Buenos Aires</td>
+                    <td>$800</td>
+                </tr>
+                <tr>
+                    <td>Las Grutas</td>
+                    <td>Playa</td>
+                    <td>Río Negro</td>
+                    <td>$750</td>
+                </tr>
+                <tr>
+                    <td>Quebrada de Humahuaca</td>
+                    <td>Naturaleza</td>
+                    <td>Jujuy</td>
+                    <td>$600</td>
+                </tr>
+                <tr>
+                    <td>Asado Argentino</td>
+                    <td>Gastronómico</td>
+                    <td>Varias</td>
+                    <td>$300</td>
+                </tr>
+                <tr>
+                    <td>Vinos de Mendoza</td>
+                    <td>Gastronómico</td>
+                    <td>Mendoza</td>
+                    <td>$1000</td>
+                </tr>
+                <tr>
+                    <td>Difunta Correa</td>
+                    <td>Religioso</td>
+                    <td>San Juan</td>
+                    <td>$500</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </section>
+    <div id="footer"></div>
+
+    <script src="../assets/js/include.js"></script>
 </body>
 
 </html>
