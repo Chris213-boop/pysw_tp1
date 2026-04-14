@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turismo Jujuy</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 
 <body>
@@ -13,39 +15,41 @@
 
 <main>
 
-<section class="hero">
-    <video autoplay muted loop>
-        <source src="assets/video/jujuy.mp4" type="video/mp4">
-    </video>
+    <section class="hero">
+        <video autoplay muted loop>
+            <source src="assets/img/video.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+            <h2 class="fade">Explorá sin límites</h2>
+        </div>
+    </section>
 
-    <div class="overlay">
-        <h1>Descubrí Nuevos Destinos</h1>
-        <p>Viví experiencias únicas</p>
-    </div>
-</section>
+    <section class="destinos">
+        <h2>Destinos destacados</h2>
+        <div class="cards">
+            <article class="card">
+                <img src="assets/img/d1.jpg">
+                <div class="card-info">Playa</div>
+            </article>
+            <article class="card">
+                <img src="assets/img/d2.jpg">
+                <div class="card-info">Montaña</div>
+            </article>
+        </div>
+    </section>
 
-<section class="destacados">
-    <h2>Destinos Destacados</h2>
+    <section class="contador">
+        <h2 class="count">0</h2>
+        <p>Viajeros felices</p>
+    </section>
 
-    <div class="cards">
-
-        <article class="card">
-            <img src="assets/img/jujuy.jpg">
-            <h3>Jujuy</h3>
-        </article>
-
-        <article class="card">
-            <img src="assets/img/bariloche.jpg">
-            <h3>Bariloche</h3>
-        </article>
-
-        <article class="card">
-            <img src="assets/img/mendoza.jpg">
-            <h3>Mendoza</h3>
-        </article>
-
-    </div>
-</section>
+    <section class="testimonios">
+        <div class="carrusel">
+            <div class="slide">"Increíble experiencia"</div>
+            <div class="slide">"Volvería mil veces"</div>
+            <div class="slide">"Todo perfecto"</div>
+        </div>
+    </section>
 
 </main>
 
