@@ -1,11 +1,20 @@
-fetch("components/header.html")
-.then(respuesta => respuesta.text())
+let ruta = "";
+
+/* Si estoy dentro de /pages */
+if (window.location.pathname.includes("/pages/")) {
+    ruta = "../";
+}
+
+/* HEADER */
+fetch(ruta + "components/header.html")
+.then(res => res.text())
 .then(data => {
     document.getElementById("header").innerHTML = data;
 });
 
-fetch("components/footer.html")
+/* FOOTER */
+fetch(ruta + "components/footer.html")
 .then(res => res.text())
 .then(data => {
-document.getElementById("footer").innerHTML = data;
+    document.getElementById("footer").innerHTML = data;
 });

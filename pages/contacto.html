@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/css/contacto.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+
+    <title>Formulario de Contacto</title>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="contenedor">
+
+        <div class="info">
+            <h1>Contáctanos</h1>
+            <p>
+                Planificá tu próximo viaje con nosotros.
+                Respondemos consultas sobre destinos, precios,
+                paquetes turísticos y promociones especiales.
+            </p>
+        </div>
+
+        <div class="formulario">
+
+            <h2>Enviar Consulta</h2>
+
+            <form>
+
+                <div class="form-grid">
+
+                    <input type="text" placeholder="Nombre" required>
+
+                    <input type="email" placeholder="Email" required>
+
+                    <input type="tel" placeholder="Teléfono" required>
+
+                    <select required>
+                        <option value="">Destino de interés</option>
+                        <option>Bariloche</option>
+                        <option>Cataratas</option>
+                        <option>El Calafate</option>
+                        <option>Jujuy</option>
+                        <option>Mar Del Plata</option>
+                        <option>Mendoza</option>
+                        <option>Monte Hermoso</option>
+                        <option>Necochea</option>
+                        <option>Pinamar</option>
+                        <option>Puerto Iguazú</option>
+                        <option>Puerto Madryn</option>
+                        <option>Salta</option>
+                        <option>San Juan</option>
+                        <option>Tafí Del Valle</option>
+                        <option>Ushuaia</option>
+                        <option>villa Carlos Paz</option>
+                        <option>Villa Gesell</option>
+                    </select>
+
+                    <textarea class="full" placeholder="Escribí tu mensaje..." required></textarea>
+
+                    <a href="#ok" class="boton full">
+                        Enviar Consulta
+                    </a>
+
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL -->
+    <div id="ok" class="modal">
+        <div class="modal-box">
+            <h2>¡Mensaje Enviado!</h2>
+            <p>Nos comunicaremos con vos a la brevedad.</p>
+
+            <div class="spinner"></div>
+
+            <a href="#" class="cerrar">Cerrar</a>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../assets/js/include.js"></script>
+
+</body>
+
+</html>
